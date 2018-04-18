@@ -202,7 +202,9 @@ public class HomeActivityJava extends AppCompatActivity implements View.OnClickL
 
         numberBadgeItem = new TextBadgeItem()
                 .setBorderWidth(4)
-                .setBackgroundColorResource(R.color.blue)
+                .setBorderColor(android.R.color.holo_red_dark)
+                .setBackgroundColor(android.R.color.holo_red_dark)
+
                 .setText("" + lastSelectedPosition)
                 .setHideOnSelect(autoHide.isChecked());
 

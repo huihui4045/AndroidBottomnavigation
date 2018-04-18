@@ -77,7 +77,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, CompoundButton.O
 
         numberBadgeItem = TextBadgeItem()
                 .setBorderWidth(4)
-                .setBackgroundColorResource(R.color.blue)
+                .setBackgroundColorResource(android.R.color.holo_red_dark)
                 .setText("0")
                 .setHideOnSelect(autoHide.isChecked)
 
@@ -150,8 +150,13 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener, CompoundButton.O
             val snackbar = Snackbar.make(message, "Fab Clicked", Snackbar.LENGTH_LONG)
             snackbar.setAction("dismiss") { snackbar.dismiss() }
             snackbar.show()
+
+
+
+            numberBadgeItem.setText(""+i++);
         }
     }
+    var i=10;
 
     override fun onItemSelected(adapterView: AdapterView<*>, view: View, i: Int, l: Long) {
         refresh()
